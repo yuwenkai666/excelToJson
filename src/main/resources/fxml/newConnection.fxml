@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<AnchorPane prefHeight="389.0" prefWidth="569.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zzg.mybatis.generator.controller.DbConnectionController">
+   <children>
+      <GridPane alignment="CENTER_RIGHT" layoutX="5.0" layoutY="50.0" vgap="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="180.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="31.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="25.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+          <children>
+            <Label text="表格注释行" GridPane.rowIndex="0" />
+            <TextField fx:id="commentLines" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <Label text="表格字段行" GridPane.rowIndex="1" />
+            <TextField fx:id="fieldLine" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="表格字段类型行" GridPane.rowIndex="2" />
+            <TextField fx:id="fieldTypeLine" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="表格索引" GridPane.rowIndex="3" />
+            <TextField fx:id="sheetIndex" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="数据开始行" GridPane.rowIndex="4" />
+            <TextField fx:id="beginLine" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="结尾去掉行数" GridPane.rowIndex="5" />
+            <TextField fx:id="totalCut" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="文件输出位置" GridPane.rowIndex="6" />
+            <TextField fx:id="outputUrl" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" maxWidth="-Infinity" prefHeight="27.0" prefWidth="100.0"  GridPane.columnIndex="3" GridPane.rowIndex="6" onAction="#chooseProjectFolder" text="选择">
+            </Button>
+            <Label text="编码格式" GridPane.rowIndex="7" />
+            <ChoiceBox fx:id="encodingChoice" maxWidth="-Infinity" prefHeight="27.0" prefWidth="220.0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="UTF-8" />
+                        <String fx:value="ISO8859-1" />
+                        <String fx:value="GBK" />
+                    </FXCollections>
+                </items>
+             </ChoiceBox>
+         </children>
+      </GridPane>
+      <AnchorPane layoutY="340.0" prefHeight="0.0" prefWidth="570.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+          <Button layoutX="467.0" layoutY="12.0" mnemonicParsing="false" onAction="#saveConnection" prefHeight="28.0" prefWidth="61.0" text="保存"  AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="240.0">
+          </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
